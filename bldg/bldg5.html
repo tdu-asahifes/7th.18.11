@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="description" content="第6回旭祭 | 東京電機大学東京千住キャンパス 学園祭は11/4(土)、11/5(日)に行われます。このサイトでは第6回旭祭の情報を掲載します。">
+	<title>第6回旭祭　企画紹介 | 5号館</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="stylesheet" type="text/css" media="all" href="../style.css">
+	<!--[if lt IE 9]>
+	<script src="js/html5.js"></script>
+	<script src="js/css3-mediaqueries.js"></script>
+	<![endif]-->
+	<script src="../js/jquery1.4.4.min.js"></script>
+	<script src="../js/script.js"></script>
+</head>
+
+<body>
+
+	<header id="header" role="banner">
+		<h1>東京電機大学 第6回旭祭</h1>
+	</header>
+
+	<nav id="mainNav">
+		<div class="inner">
+			<a class="menu" id="menu"><span>MENU</span></a>
+			<div class="panel">
+				<ul>
+					<li><a href="../index.html"><strong>トップページ</strong><span>Top</span></a></li>
+					<li><a href="../greeting.html"><strong>ご挨拶</strong><span>Greeting</span></a></li>
+					<li><a href="../summary.html"><strong>概要</strong><span>Summary</span></a></li>
+					<li><a href="../4visitors.html"><strong>来場者の方へ</strong><span>For visitors</span></a></li>
+					<li class="current-menu-item"><a href="../program.html"><strong>企画紹介</strong><span>Program</span></a></li>
+					<li><a href="../access.html"><strong>アクセス</strong><span>Access</span></a></li>
+					<li><a href="../link.html"><strong>リンク</strong><span>Link</span></a></li>
+					<li><a href="../contact.html"><strong>お問い合わせ</strong><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="wrapper">
+
+		<section id="main">
+			<section id="post-250" class="content">
+				<h3 class="heading">企画紹介<br>
+                Program</h3>
+				<article class="post">
+                    <h3>5号館</h3>
+                    
+                    <p>気になる階を選択でフロアマップへ</p>
+                    <div>
+					<img src="../images/map/asahihp5goukan.png" usemap="#ImageMap" alt="" />
+					<map name="ImageMap">
+ 				 	<area shape="poly" coords="245,141,208,401,963,399,920,136,920,136" href="bldg5_f9.html" alt="9F" />
+  					<area shape="poly" coords="205,405,179,586,992,585,963,401,963,401" href="bldg_not.html" alt="8F" />
+  					<area shape="poly" coords="178,596,154,742,1017,744,989,594,989,594" href="bldg5_f7.html" alt="7F" />
+  					<area shape="poly" coords="154,749,36,1526,1135,1526,1017,751,1017,751" href="bldg_not.html" alt="6~2F" />
+  					<area shape="poly" coords="1167,1721,1137,1536,34,1536,4,1721,4,1721" href="bldg5_f1.html" alt="1F" />
+					</map>
+			  	    </div>
+			  	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+					<script src="../js/jquery.rwdImageMaps.min.js"></script>
+					<script>
+						$(document).ready(function(e) {
+						$('img[usemap]').rwdImageMaps();
+	
+						$('area').on('click', function() {
+							alert($(this).attr('alt') + ' clicked');
+						});
+						});
+					</script>
+				</article>
+			</section>
+		</section>
+	</div>
+    
+	<footer id="footer">
+        <p><a href="../campus.html">東京千住キャンパス紹介</a></p>
+        <p><a href="../aboutus.html">旭祭実行委員会について</a> | <a href="../sitepolicy.html">このサイトについて</a></p>
+        <p id="copyright">Copyright(c) 2017 第6回旭祭実行委員会 All Rights Reserved.</p>
+	</footer>
+
+</body>
+</html>
