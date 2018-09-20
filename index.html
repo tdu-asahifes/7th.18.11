@@ -1,94 +1,19 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
-	<meta name="description" content="第7回旭祭 | 東京電機大学東京千住キャンパス 学園祭は11/3(土)、11/4(日)に行われます。このサイトでは第7回旭祭の情報を掲載します。">
-	<title>第7回旭祭</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="stylesheet" type="text/css" media="all" href="style.css">
-	<!--[if lt IE 9]>
-	<script src="js/html5.js"></script>
-	<script src="js/css3-mediaqueries.js"></script>
-	<![endif]-->
-	<script src="js/jquery1.4.4.min.js"></script>
-	<script src="js/script.js"></script>
+  <title>CUBE</title>
+  <meta charset="utf-8">
+<style>
+#stage {
+  width: 1000px;
+  height: 500px;
+}
+</style>
 </head>
-
 <body>
-
-	<header id="header" role="banner">
-		<h1>東京電機大学 第7回旭祭</h1>
-	</header>
-
-	<nav id="mainNav">
-		<div class="inner">
-			<a class="menu" id="menu"><span>MENU</span></a>
-			<div class="panel">
-				<ul>
-					<li class="current-menu-item"><a href="index.html"><strong>トップページ</strong><span>Top</span></a></li>
-					<li><a href="greeting.html"><strong>ご挨拶</strong><span>Greeting</span></a></li>
-					<li><a href="summary.html"><strong>概要</strong><span>Summary</span></a></li>
-					<li><a href="4visitors.html"><strong>来場者の方へ</strong><span>For visitors</span></a></li>
-					<li><a href="program.html"><strong>企画紹介</strong><span>Program</span></a></li>
-					<li><a href="access.html"><strong>アクセス</strong><span>Access</span></a></li>
-					<li><a href="link.html"><strong>リンク</strong><span>Link</span></a></li>
-					<li><a href="contact.html"><strong>お問い合わせ</strong><span>Contact</span></a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-
-    <div id="wrapper">
-        <div id="mainBanner">
-            <img src="./images/top.png" alt="第7回旭祭">
-        </div>
-    </div>
-
-  <!--  <section class="gridWrapper">
-        <article class="grid">
-            <div class="box">
-                <img width="320" height="320" src="images/asahi/bn_talk.png" alt="トークショー" />
-                <h3>トークショー情報</h3>
-                <p>トークショー</p>
-                <p class="readmore"><a href="talkshow.html">詳細を確認する</a></p>
-            </div>
-        </article>
-        <article class="grid">
-            <div class="box">
-                <img width="320" height="320" src="images/asahi/concert.png" alt="コンサート" />
-                <h3>コンサート情報</h3>
-                <p>TDU Talk&Live 2018</p>
-                <p class="readmore"><a href="concert.html">詳細を確認する</a></p>
-            </div>
-        </article>
-    </section>
-    
-  <section class="gridWrapper">
-        <article class="grid">
-            <div class="box">
-                <a class="twitter-timeline" width="320" height="320" data-chrome="noheader nofooter" href="https://twitter.com/1_asahisai">Tweets by 1_asahisai</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-        </article>
-        <article class="grid">
-            <div class="box">
-                <a class="twitter-timeline" width="320" height="320" data-chrome="noheader nofooter" href="https://twitter.com/asahisai">Tweets by asahisai</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-        </article>
-        <article class="grid">
-            <div class="box">
-                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fasahisai%2F&tabs=timeline&width=320&height=320&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=1348219945277388" width="320" height="320" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-            </div>
-        </article>
-    </section>-->
-        
-	<footer id="footer">
-        <p><a href="campus.html">東京千住キャンパス紹介</a></p>
-        <p><a href="aboutus.html">旭祭実行委員会について</a> | <a href="sitepolicy.html">このサイトについて</a></p>
-        <p id="copyright">Copyright(c) 2018 第7回旭祭実行委員会 All Rights Reserved.</p>
-	</footer>
-<!-- 3yqifbs9 -->
+  <div id="stage"></div>
+  <script src="js/three.min.js"></script>
+  <script src="js/OrbitControls.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
