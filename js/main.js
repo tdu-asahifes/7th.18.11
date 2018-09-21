@@ -6,8 +6,8 @@
   var ambient;
   var camera;
   var renderer;
-  var width = 1000;
-  var height = 500;
+  var width = window.outerWidth;
+  var height = window.outerHeight;
   var controls;
 
   var count = 100;
@@ -15,6 +15,11 @@
   var size;
   var box;
 
+  //resize??????
+  window.onresize = function(){
+    location.reload()
+  };
+  
   // scene ステージ
   scene = new THREE.Scene();
 
