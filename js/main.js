@@ -36,8 +36,10 @@
   camera.lookAt(scene.position);
 
   // controls
+  /*
   controls = new THREE.OrbitControls(camera);
   controls.autoRotate = true;
+  */
 
   // renderer
   renderer = new THREE.WebGLRenderer({antialias: true});
