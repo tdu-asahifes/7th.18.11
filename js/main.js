@@ -1,76 +1,70 @@
 (function() {
   'use strict';
 
-  var scene;
-  var light;
-  var ambient;
-  var camera;
-  var renderer;
-  var width = window.outerWidth;
-  var height = window.outerHeight;
-  var controls;
+  window.addEventListener('load', init);
+  function init(){
+    // 描画領域
+    const width = 960;
+    const height = 540;
+    const count = 100;
+    let rot = 0;
+    let box;
 
-  var count = 100;
-  var i;
-  var size;
-  var box;
+    // 3d表示用のレンダラーを作成
+    const renderer = new THREE.WebGLRenderer({
+      canvas: document.querySelector('#stage'),
+      alpha: true // 背景を透明にする
+    });
+    // Retinaに対応させる魔法の一文!
+    renderer.setPixelRatio(window.devicePixelRatio);
+    // 描画領域の設定
+    renderer.setSize(width, height);
 
-  //resize??????
-  window.onresize = function(){
-    location.reload()
-  };
-  
-  // scene ステージ
-  scene = new THREE.Scene();
+    // シーンの作成
+    const scene = new THREE.Scene();
 
-  // light
-  light = new THREE.DirectionalLight(0xffffff, 1);
-  light.position.set(0, 100, 30);
-  scene.add(light);
-  ambient = new THREE.AmbientLight(0x404040);
-  scene.add(ambient);
+    // カメラを作成
+    // THREE.PerspectiveCamera(画角, アスペクト比);
+    const camera = new THREE.PerspectiveCamera(45, width / height);
 
-  // camera 
-  camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
-  camera.position.set(200, 100, 300);
-  camera.lookAt(scene.position);
+    // 平行光源
+    const light = new THREE.DirectionalLight(0xffffff, 2);
+    light.position.x = 100;
+    light.position.y = 85;
+    light.position.z = 50;
+    scene.add(light);
 
-  // controls
-  /*
-  controls = new THREE.OrbitControls(camera);
-  controls.autoRotate = true;
-  */
 
-  // renderer
-  renderer = new THREE.WebGLRenderer({antialias: true});
-  renderer.setSize(width, height);
-  renderer.setClearColor(0xefefef);
-  renderer.setPixelRatio(window.devicePixelRatio);
-  document.getElementById('stage').appendChild(renderer.domElement);
+    for (let i = 0; i < count; i++) {
+      const size = Math.random() * 20 + 10;
+      const geometry = new THREE.BoxGeometry(size, size, size);
+      const material = new THREE.MeshToonMaterial({color: Math.random() * 0xffffff});
+      box = new THREE.Mesh(geometry, material);
 
-  // picking
-  for (i = 0; i < count; i++) {
-    size = Math.random() * 20 + 10;
-    box = new THREE.Mesh(
-        new THREE.BoxGeometry(size, size, size),
-        new THREE.MeshPhongMaterial({color: Math.random() * 0xffffff})
-    );
-    box.position.set(
-        Math.random() * 200 - 100,
-        Math.random() * 200 - 100,
-        Math.random() * 200 - 100
-    );
-    scene.add(box);
+      box.position.set(
+          Math.random() * 200 - 100,
+          Math.random() * 200 - 100,
+          Math.random() * 200 - 100
+      );
+      scene.add(box);
+    }
+
+
+    // アニメーション
+    // 初回起動
+    tick();
+
+    function tick() {
+      rot += 0.1;
+      const radian = rot * Math.PI / 180;
+      camera.position.x = 500 * Math.sin(radian);
+      camera.position.z = 500 * Math.cos(radian);
+      camera.position.y = 100;
+      camera.lookAt(new THREE.Vector3(0, 0, 0));
+      // レンダリング
+      renderer.render(scene, camera);
+      requestAnimationFrame(tick);
+    }
   }
-
-  function render() {
-    requestAnimationFrame(render);
-
-    /*
-    controls.update();
-    */
-    renderer.render(scene, camera);
-  }
-  render();
 
 })();
