@@ -19,10 +19,11 @@ font-size:13px;
 font-family:verdana,"ヒラギノ丸ゴ ProN W4","Hiragino Maru Gothic ProN","メイリオ","Meiryo","ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
 line-height:1.5;
 -webkit-text-size-adjust:100%;
-background:#f7f7f7 url(./images/testback.jpg) no-repeat center center;
+background:#f7f7f7 url(./images/bg3.jpg) no-repeat center center;
 background-size:cover;
-margin: 0;
-overflow: hidden;
+background-repeat: no-repeat;
+background-attachment: fixed;
+
 }
 
 
@@ -431,38 +432,7 @@ img.alignleft{margin:0 7px 2px 0;}
 .alignright{float:right;}
 .alignleft{float:left;}
 
-/*otobe*/
-.prof-wrapper {
-	padding :15px;
-}
-.prof-box {
-	width: 100%;
-	display: flex;
-	margin-bottom: 1em;
-}
-.prof-image {
-	width: 40%;
-	padding: 1em;
-}
-.prof-sentence {
-	width: 60%;
-	align-self: center;
-	line-height: 2em;
-}
-.prof-box-reverce {
-	flex-direction: row-reverse;
-}
 
-h5.prof {
-	font-size: 1.1em;
-	font-weight: bold;
-	margin-bottom: 0.5em;
-}
-
-.heading-mini {
-	background: rgb(241, 150, 30);
-	color: #fff;
-}
 
 /* 地図
 *****************************************************/
@@ -735,18 +705,6 @@ height: 100%;
 
   .alignleft,.alignright,img.alignleft,img.alignright{float:none;display:block;margin:0 auto 10px;}
 
-  .prof-image {
-	width: 100%;
-	padding: 1em;
-	}
-	.prof-sentence {
-		width: 100%;
-		align-self: center;
-		line-height: 2em;
-	}
-	.prof-box {
-		flex-direction: column-reverse;
-	}
 }
 
 
@@ -755,5 +713,3 @@ height: 100%;
 	.box img{max-width:100px;}
 	#mainBanner h2,#mainBanner p{font-size:80%;}
 }
-
-
