@@ -490,12 +490,22 @@ height: 100%;
 	nav div.panel{
 	display:block !important;
 	float:left;
-	background: rgb(241, 150, 30);
+	background: rgb(234, 30, 241);
 	}
 
 	a#menu{display:none;}
+	
+	#bar{
+		display: flex; /* 子要素をflexboxで揃える */
+		flex-direction: column; /* 子要素をflexboxにより縦方向に揃える */
+		justify-content: center; /* 子要素をflexboxにより中央に配置する */
+		align-items: center;  /* 子要素をflexboxにより中央に配置する */
+		width: 100px; /* 見た目用 */
+		height: 50px; /* 見た目用 */
+		border: 1px solid; /* 見た目用 */
+	}
 
-  #mainNav{
+  	#mainNav{
 	clear:both;
 	z-index:200;
 	position:relative;
@@ -512,8 +522,8 @@ height: 100%;
 	text-align: center;
 	float:left;
 	font-size:13px;
-	width:120px;
-	height:30px;
+	width:200px;
+	height:25px;
 	padding:15px 0;
 	border-top:2px solid #ebebeb;
 	border-bottom:2px solid #ebebeb;
@@ -526,8 +536,8 @@ height: 100%;
 	font-size:10px;
 	}
 
-	#mainNav ul ul{width:160px;background:#fff;}
-	#mainNav li ul{display:none;}
+	#mainNav ul ul{width:200px;background:#fff;}
+	/*#mainNav li ul{visibility:hidden;}*/
 
 	#mainNav li:hover ul{
 	display:block;
@@ -564,7 +574,7 @@ height: 100%;
 	}
 
 	#header,#wrapper,.inner{
-	width:960px;
+	width:1280px;
 	padding:0;
 	margin:0 auto;
 	}
