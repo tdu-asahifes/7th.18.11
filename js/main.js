@@ -3,9 +3,9 @@ if(!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
   (function() {
     'use strict';
       //resize reload
-      window.onresize = function(){
-        location.reload()
-      };
+      //window.onresize = function(){
+        //location.reload()
+      //};
   
     window.addEventListener('load', init);
     function init(){
