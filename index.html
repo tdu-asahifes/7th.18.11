@@ -1,149 +1,362 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
-    <meta charset="utf-8">
-    <script src="https://use.typekit.net/cdu7bau.js"></script>
-    <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
-    <title>旭祭2018 公式サイト</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./stylesheets/html5reset.css" type="text/css">
-    <link rel="stylesheet" href="./stylesheets/design.css" type="text/css">
-    <link rel="stylesheet" href="./stylesheets/meanmenu.css" type="text/css">
-    <link rel="stylesheet" href="./stylesheets/clingify.css" type="text/css">
-    <link rel="stylesheet" href="https://use.typekit.net/cdu7bau.css">
-    <meta property="og:title" content="旭祭2018 公式サイト">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="">
-    <meta property="og:description" content="">
-    <!-- <meta property="fb:app_id" content="appid"> -->
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@asahisai">
-    <meta name="description" content="旭祭公式ホームページ">
-    <meta name="keywords" content="電大,東京電機大学,2018,旭祭,第七回旭祭,学園祭,大学,dendai,asahisai">
-    <meta name="theme-color" content="#D54762">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#d54762">
-    <meta name="msapplication-TileColor" content="#d54762">
-
-    <!--3DCG-->
-    <script src="js/main.js"></script>
-    <script src="js/three.min.js"></script>
-    <style>
-            #stage {
-              height: 100%;
-              position: absolute;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              display: block;
-              z-index: 0;
-              width:640px;
-          margin:0 auto;
-            }
-            </style>
+<head>
+	<title>Home</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/themify/themify-icons.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/lightbox2/css/lightbox.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>        
-    <nav class="nav mb31">
-        <ul>
-            <li>
-                <a href="./index2.html">トップページ</a>
-            </li>
-            <li>
-                <a href="./greeting.html">ご挨拶</a>
-            </li>
-            <li>
-                <a href="./summary.html">概要</a>
-            </li>
-            <li>
-                <a href="./4visitors.html">来場者の方へ</a>
-            </li>
-            <li>
-                <a href="./program.html">企画紹介</a>
-            </li>
-            <li>
-                <a href="./contact.html">お問い合わせ</a>
-            </li>
-        </ul>
-    </nav>
-    <header id="header" class="header">
-        <h1>
-            <a href="index2.html">
-               <!-- <canvas id="stage"></canvas>-->
-            </a>
-        </h1>
-        <div class="sbtn">
-            <ul>
-                <li>
-                    <a href="https://twitter.com/asahisai">
-                        <img src="design/images/social/twitter.png" height="32" width="32">
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </header>
-    <footer class="footer">
-        <div class="ftsbtn clearfix">
-            <ul>
-                <li>
-                    <a href="https://twitter.com/asahisai">
-                        <img src="design/images/social/twitter.png" height="28" width="28">
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="copyright">
-            <small>Copyright &copy; 2018 旭祭実行委員会 All Rights Reserved.</small>
-        </div>
-        <div class="scbtn">
-            <ul>
-                <li>
-                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.sg.dendai.ac.jp/s1j-asahisai/" data-via="asahisai""
-                        data-hashtags="旭祭2018">Tweet</a>
-                    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script>
-                </li>
-            </ul>
-        </div>
-        </footer>
-        <script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
-        <script src="./js/jquery.meanmenu.js"></script>
-		<script>
-		$(document).ready(function() {
-			$('nav').meanmenu({
-			    meanMenuClose: "×", // クローズボタン
-			    meanMenuCloseSize: "18px", // クローズボタンのフォントサイズ
-			    meanMenuOpen: "<span /><span /><span />", // 通常ボタン
-			    meanRevealPosition: "right", // 表示位置
-			    meanScreenWidth: "1023", // 表示させるウィンドウサイズ(ブレイクポイント)
-			});
-		});
-        </script>	
-        <script type="text/javascript" src="./stylesheets/clingify.css"></script>
-		<script type="text/javascript">
-			$(function() {
-				$('.nav').clingify();
-			});
-        </script>
-		<script>
-			$(document).ready(function() {
-				var pagetop = $('.pagetop');
-				$(window).scroll(function () {
-					if ($(this).scrollTop() > 100) {
-						pagetop.fadeIn();
-					} else {
-						pagetop.fadeOut();
-					}
-				});
-				pagetop.click(function () {
-					$('body, html').animate({ scrollTop: 0 }, 500);
-					return false;
-				});
-			});
-        </script>
-	</body>
+<body class="animsition">
+
+	<!-- Header -->
+	<header>
+		<!-- Header desktop -->
+		<div class="wrap-menu-header gradient1 trans-0-4">
+			<div class="container h-full">
+				<div class="wrap_header trans-0-3">
+					<!-- Logo -->
+					<div class="logo">
+					</div>
+
+					<!-- Menu -->
+					<div class="wrap_menu p-l-45 p-l-0-xl">
+						<nav class="menu">
+							<ul class="main_menu">
+								<li>
+									<a href="index.html">トップ</a>
+								</li>
+
+								<li>
+									<a href="about.html">旭祭実行委員会</a>
+								</li>
+
+								<li>
+									<a href="coming.html">来場者の方へ</a>
+								</li>
+
+								<li>
+									<a href="#talkshow">トークショー企画</a>
+								</li>
+
+								<li>
+									<a href="contact.html">アクセス</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+
+					<div class="social flex-w flex-l-m p-r-20">
+						<button class="btn-show-sidebar m-l-33 trans-0-4"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Sidebar -->
+	<aside class="sidebar trans-0-4">
+		<!-- Button Hide sidebar -->
+		<button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>
+
+		<!-- - -->
+		<ul class="menu-sidebar p-t-95 p-b-70">
+			<li class="t-center m-b-13">
+				<a href="index.html" class="txt19">トップ</a>
+			</li>
+
+			<li class="t-center m-b-13">
+				<a href="menu.html" class="txt19">旭祭実行委員会</a>
+			</li>
+
+			<li class="t-center m-b-13">
+				<a href="coming.html" class="txt19">来場者の方へ</a>
+			</li>
+
+			<li class="t-center m-b-13">
+				<a href="#talkshow" class="txt19">トークショー</a>
+			</li>
+
+			<li class="t-center m-b-13">
+				<a href="contact.html" class="txt19">アクセス</a>
+			</li>
+		</ul>
+	</aside>
+
+	<!-- Slide1 -->
+	<section class="section-slide">
+		<div class="">
+			<div class="slick1">
+				<div class="item-slick1 item1-slick1" style="background-image: url(images/testback2.jpg);object-fit: cover;object-position: 100% 100%;">
+
+					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+
+						<div class="wrap-btn-slide1 animated visible-false" data-appear="zoomIn">
+						</div>
+					</div>
+				</div>
+
+			
+
+			</div>
+		</div>
+	</section>
+
+	<!-- Welcome -->
+	<section class="section-welcome bg1-pattern p-t-120 p-b-105">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 p-t-45 p-b-30">
+					<div class="wrap-text-welcome t-center">
+						<!-- <span class="tit2 t-center">
+							Italian Restaurant
+						</span> -->
+
+						<h3 class="tit3 t-center m-b-35 m-t-5">
+							ご挨拶
+						</h3>
+
+						<p class=" m-b-22 size3 m-l-r-auto" style="text-align: left">
+							本年度で旭祭は第7回を迎えました．
+							今年から千住キャンパスに千葉ニュータウンキャンパスが移転してきました．
+                            当委員会のメンバーも格段に増え，去年の旭祭より大規模で活気のある新しい旭祭にしようとメンバー皆で意気込んでいます．
+                            また，今年から新しい企画も多々あります．
+                            来場者の方々には「楽しかった，来年の旭祭もまた来よう」と思われるような旭祭を作り上げていきたいと思います．
+						</p>
+					</div>
+				</div>
+
+				<div class="col-md-6 p-b-30">
+					<div class="wrap-pic-welcome size2 bo-rad-10 hov-img-zoom m-l-r-auto">
+						<img src="https://scontent-nrt1-1.xx.fbcdn.net/v/t1.0-1/29314535_958271110997121_1225513861119540143_n.jpg?_nc_cat=110&oh=1e1b131579e966f71012721cc362f6b0&oe=5C1CB7B4" alt="IMG-OUR">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- Intro -->
+<a name="talkshow">
+<section class="section-intro">
+	<div class="header-intro parallax100 t-center p-t-135 p-b-158" style="background-image: url(images/spotify.png);">
+		<!--<span class="tit2 p-l-15 p-r-15">
+			Discover
+		</span>-->
+		<h3 class="tit4 t-center p-l-15 p-r-15 p-t-3">
+			トークショー
+		</h3>
+	</div>
+
+	<div class="content-intro bg-white p-t-77 p-b-133">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 p-t-30">
+					<!-- Block1 -->
+					<div class="blo1">
+						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom">
+							<a href="talkshow.html"><img src="./images/talkshow/tomori.jpg" alt="IMG-INTRO" ></a>
+						</div>
+
+						<div class="wrap-text-blo1 p-t-35">
+							<a href="talkshow.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">						
+									楠木ともりトークショー
+							</h4></a>
+
+							<p class="m-b-20">
+				
+							</p>
+
+							<a href="talkshow.html" class="txt4">
+								Learn More
+								<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 p-t-30">
+					<!-- Block1 -->
+					<div class="blo1">
+						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom">
+							<a href="kutihira.html"><img src="images/concert/nakamura.jpg" alt="IMG-INTRO"></a>
+						</div>
+
+						<div class="wrap-text-blo1 p-t-35">
+							<a href="kutihira.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
+								本格雑談『くちをひらく』
+							</h4></a>
+
+							<p class="m-b-20">
+								とにかく口を開かずにはいられない二人が、ゲストを交えて、どこに向かうかわからない、どう転ぶかわからない、神変出没の本格雑談を繰り広げます！<br>
+							</p>
+
+							<a href="kutihira.html" class="txt4">
+								Learn More
+								<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+</a>
+<section class="bg1-pattern p-t-120 p-b-105">
+	<div class="container">
+		<div class="wrap-text-welcome t-center">
+			<h3 class="tit3 t-center m-b-35 m-t-5">
+				開催期間
+			</h3>
+
+			<p class="t-center m-b-22 size3 m-l-r-auto" >
+				【名称】<br>
+				第七回旭祭<br>
+				【主催】<br>
+				旭祭実行委員会<br>
+				【日時】<br>
+				11月3日(土) 10:00〜17:00<br>
+				11月4日(日) 10:00～16:00<br>
+				【場所】<br>
+				東京電機大学千住キャンパス<br>
+			</p>
+		</div>
+	</div>
+</section>
+	<!-- Footer -->
+	<footer class="bg1">
+		<div class="container p-t-40 p-b-70">
+			<div class="row">
+				<div class="col-sm-6 col-md-4 p-t-50">
+					<!-- - -->
+					<h4 class="txt13 m-b-33">
+						お問い合わせ
+					</h4>
+
+					<ul class="m-b-70">
+						<li class="txt14 m-b-14">
+							<i class="fa fa-map-marker fs-16 dis-inline-block size19" aria-hidden="true"></i>
+							〒120-8551<br>
+                            東京都足立区千住旭町5<br>
+                            東京電機大学東京千住キャンパス3号館M2階M224室<br>
+						</li>
+
+						<li class="txt14 m-b-14">
+							<i class="fa fa-phone fs-16 dis-inline-block size19" aria-hidden="true"></i>
+							03-5284-5358
+						</li>
+
+						<li class="txt14 m-b-14">
+							<i class="fa fa-envelope fs-13 dis-inline-block size19" aria-hidden="true"></i>
+							asahisaisns@gmail.com
+						</li>
+					</ul>
+
+				</div>
+
+				<div class="col-sm-6 col-md-4 p-t-50">
+					<!-- - -->
+					<h4 class="txt13 m-b-33">
+						Latest twitter
+					</h4>
+						<a class="twitter-timeline" data-height="320" data-theme="dark" href="https://twitter.com/asahisai?ref_src=twsrc%5Etfw">Tweets by asahisai</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				</div>
+
+				
+			</div>
+		</div>
+
+		<div class="end-footer bg2">
+			<div class="container">
+				<div class="flex-sb-m flex-w p-t-22 p-b-22">
+
+					<div class="txt17 p-r-20 p-t-5 p-b-5">
+						Copyright &copy; 2018 旭祭実行委員会 All Rights Reserved.
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- Back to top -->
+	<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+	</div>
+
+	<!-- Container Selection1 -->
+	<div id="dropDownSelect1"></div>
+
+	<!-- Modal Video 01-->
+	<div class="modal fade" id="modal-video-01" tabindex="-1" role="dialog" aria-hidden="true">
+
+		<div class="modal-dialog" role="document" data-dismiss="modal">
+			<div class="close-mo-video-01 trans-0-4" data-dismiss="modal" aria-label="Close">&times;</div>
+
+			<div class="wrap-video-mo-01">
+				<div class="w-full wrap-pic-w op-0-0"><img src="images/icons/video-16-9.jpg" alt="IMG"></div>
+				<div class="video-mo-01">
+					<iframe src="https://www.youtube.com/embed/5k1hSu2gdKE?rel=0&amp;showinfo=0" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/bootstrap/js/popper.js"></script>
+	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/daterangepicker/moment.min.js"></script>
+	<script type="text/javascript" src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+	<script type="text/javascript" src="js/slick-custom.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/parallax100/parallax100.js"></script>
+	<script type="text/javascript">
+        $('.parallax100').parallax100();
+	</script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/lightbox2/js/lightbox.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
 </html>
