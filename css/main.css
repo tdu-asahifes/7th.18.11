@@ -817,8 +817,6 @@ input[type="date" i] {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  object-position: 0 100%
-  object-fit: cover;
 }
 .item-slick1 {
   height: 100vh;
@@ -887,6 +885,7 @@ input[type="date" i] {
   .prev-slick1 {
     left: 15px;
   }
+  .item-slick1{display:none;}
 }
 
 /* ------------------------------------ */
